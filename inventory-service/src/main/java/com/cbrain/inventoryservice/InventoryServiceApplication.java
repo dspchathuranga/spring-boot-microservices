@@ -14,20 +14,20 @@ public class InventoryServiceApplication {
 		SpringApplication.run(InventoryServiceApplication.class, args);
 	}
 
-//	@Bean
-//	public CommandLineRunner loadData(InventoryRepository inventoryRepository) {
-//		return args -> {
-//			Inventory inventory = new Inventory();
-//			inventory.setSkuCode("iPhone13pro128Black");
-//			inventory.setQuantity(100);
-//
-//			Inventory inventory1 = new Inventory();
-//			inventory1.setSkuCode("iPhone13proMax256Black");
-//			inventory1.setQuantity(0);
-//
-//			inventoryRepository.save(inventory);
-//			inventoryRepository.save(inventory1);
-//		};
-//	}
+	@Bean
+	public CommandLineRunner loadData(InventoryRepository inventoryRepository) {
+		return args -> {
+			Inventory inventory = new Inventory();
+			inventory.setSkuCode("iPhone13pro128Black");
+			inventory.setQuantity(100);
+
+			Inventory inventory1 = new Inventory();
+			inventory1.setSkuCode("iPhone13proMax256Black");
+			inventory1.setQuantity(0);
+
+			inventoryRepository.save(inventory);
+			inventoryRepository.save(inventory1);
+		};
+	}
 
 }
