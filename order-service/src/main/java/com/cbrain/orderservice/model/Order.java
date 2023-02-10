@@ -6,7 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "order_master")
